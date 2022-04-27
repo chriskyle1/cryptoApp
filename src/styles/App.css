@@ -9,9 +9,9 @@ h1{
     border-radius: 60px/15px;
 }
 
-body{
+/* body{
     background-color: lightslategrey;
-}
+} */
 
 div{
     background-color: grey;
@@ -36,4 +36,14 @@ button{
 button:hover {
     height: 40px;
     background: lightslategray;
+}
+
+.card{
+    border-radius: 4px;
+    box-shadow: 2px 3px 10px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-between;
+
 }

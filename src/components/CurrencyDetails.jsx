@@ -16,7 +16,7 @@ const CurrencyDetails = (props) => {
                              
         }
         getDetails()
-    }, props.addCurrency)
+    }, [props.addCurrency])
         
     
     

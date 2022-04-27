@@ -1,20 +1,20 @@
 import axios from "axios"
-import { CURRENCY_NAME } from "../globals"
+import { CURRENCY_NAME, CURRENCY_CHANGE } from "../globals"
 
-const DisplayCurrency = (props) => {
+const DisplayCurrency = async (props) => {
+    
+    const symbol = await axios.get(`${CURRENCY_CHANGE}bitcoin`)
+    console.log(symbol.data.data.currencySymbol)
 
 
-
-
-  
     return (
-        <div>
+        <div className="grid">
             {
-                props.currency.map((currency) => (
+                props.totalCurrency.map((currency) => (
                     <div>
                         <h3>{currency.name}</h3>
-                        <h2>{priceUsd}</h2>
-                        <h2>{changePercent24Hr}</h2>
+                        <h2>{currency.priceUsd}</h2>
+                        <h2>{currency.changePercent24Hr}</h2>
                     </div>
                 ))
             }

@@ -1,4 +1,4 @@
-// import './styles/App.css'
+import './styles/App.css'
 import React from 'react'
 import axios from 'axios'
 import { BASE, CURRENCY_NAME, CURRENCY_PRICE, CURRENCY_CHANGE } from './globals'
@@ -38,6 +38,7 @@ const App = () => {
     }, [])
     
     
+    
     return(
         <div>
             <h1>Welcome to the CryptoApp</h1>
@@ -45,7 +46,7 @@ const App = () => {
 
             <CurrencyDetails currency={currency}/>
 
-            <DisplayCurrency totalCurrency={totalCurrency}/>
+            {/* <DisplayCurrency totalCurrency={totalCurrency}/> */}
             
             
 
