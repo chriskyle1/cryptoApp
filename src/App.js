@@ -9,49 +9,40 @@ import DisplayCurrency from './components/DisplayCurrency'
 
 
 const App = () => {
-    const [currencys, setCurrencys] = useState('')
-    const [input , setInput] = useState([])
-    const [selectCurrency, setSelectedCurrency] = useState('')
+    const [currency, setCurrency] = useState('')
+    const [input , setInput] = useState('')
 
-    const selectedCurrency = (id, props) => {
-        const cur = props.currency
-        console.log(cur)
-        setSelectedCurrency(id)
-    }
-
-    const addCurrency = () => {
-        let list = [...currencys, input]
+    const addCurrency = async () => {
+        const key = input
         if(input){
-            setCurrencys(list)
-            console.log(list)
-        }else {
-            setInput('')
+            setCurrency(input)
+            console.log(input)
         }
+        setInput('')
+        
     }
 
-    const removeCurrency = (index) => {
-        let list = [...input]
-        list.splice(index,1)
-        setCurrencys(list)
+    const handleChange = (click) => {
+        setInput(click.target.value)
     }
 
-    const handleChange = (event) => {
-        setInput(event.target.value)
-    }
-
-    // const getSomething = async () => {
-    //     const res = await axios.get(`${CURRENCY_NAME}`)
-
-    //     console.log(res)
-    // }
-
-    // getSomething()
+      
+    // useEffect(() => {
+    //     const getCrypto = async () => {
+    //         const response = await axios.get(`${CURRENCY_NAME}`)
+    //         // console.log(response.data.data.id)
+    //     }
+    //     getCrypto()
+    // }, [])
+    
     return(
         <div>
             <h1>Welcome to the CryptoApp</h1>
+            <SelectCurrency  handleChange={handleChange} input={input} addCurrency={addCurrency} />
+
+            <CurrencyDetails  addCurrency={addCurrency} />
             
-            <SelectCurrency addCurrency={addCurrency} handleChange={handleChange} removeCurrency={removeCurrency}currencys={currencys}/>
-            <CurrencyDetails CurrencyDetails={CurrencyDetails} selectedCurrency={selectedCurrency}/>
+            
 
         </div>
     )
