@@ -3,10 +3,6 @@ import { CURRENCY_NAME, CURRENCY_CHANGE } from "../globals"
 
 const DisplayCurrency = async (props) => {
     
-    const symbol = await axios.get(`${CURRENCY_CHANGE}bitcoin`)
-    console.log(symbol.data.data.currencySymbol)
-
-
     return (
         <div className="grid">
             {

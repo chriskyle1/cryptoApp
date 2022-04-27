@@ -43,10 +43,8 @@ const App = () => {
         <div>
             <h1>Welcome to the CryptoApp</h1>
             <SelectCurrency handleChange={handleChange} input={input} addCurrency={addCurrency} />
-
             <CurrencyDetails currency={currency}/>
-
-            {/* <DisplayCurrency totalCurrency={totalCurrency}/> */}
+            <DisplayCurrency totalCurrency={totalCurrency}/>
             
             
 
