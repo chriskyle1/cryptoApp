@@ -1,11 +1,39 @@
+
+
+
 h1{
     text-align: center;
     background-color:blue;
     color: white;
-    padding: 35x;
+    padding: 75x;
+    border-radius: 60px/15px;
 }
 
-/* div{
-    background-color: rgb(92, 181, 211);
-} */
+body{
+    background-color: lightslategrey;
+}
 
+div{
+    background-color: grey;
+    border-radius: 10px/15px;
+    border-color: black;
+}
+
+input{
+    height: 30px;
+    margin: 5px;
+    text-align: center;
+
+}
+
+button{
+    background: white;
+    padding:0.5em 1em;
+    font-weight: bold;
+
+}
+
+button:hover {
+    height: 40px;
+    background: lightslategray;
+}

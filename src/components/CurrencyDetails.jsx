@@ -9,20 +9,17 @@ const CurrencyDetails = (props) => {
     
     const [currencyDetails, setCurrencyDetails] = useState('')
 
-    useEffect(() => {
-        const getDetails = async (props) => {
-            const res = await axios.get(`${CURRENCY_NAME}bitcoin`)
-            setCurrencyDetails(res)
-                     
-        }
-        getDetails()
-    })
-    
+    // const getDetails = async () => {
+    //     const res = await axios.get(`${CURRENCY_NAME}bitcoin`)
+    //     setCurrencyDetails(res)
+                         
+    // }
+    //     getDetails()
+        
     
     
     return(
         <div>
-            
             <h2>{currencyDetails.name}</h2>
             <h3>{currencyDetails.priceUsd}</h3>
             <h3>{currencyDetails.changePercent24Hr}</h3>
