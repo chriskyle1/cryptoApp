@@ -1,5 +1,5 @@
-export const CURRENCY_KEY = 'https://api.exchange.coinbase.com/currencies';
+export const CURRENCY_NAME = 'https://api.coincap.io/v2/assets/';
 
-export const CONVERSION_KEY = 'https://api.exchange.coinbase.com/conversions';
+export const CURRENCY_PRICE = 'https://api.coincap.io/v2/assets';
 
-export const PRICE_KEY = 'https://api.exchange.coinbase.com/oracle';
+export const CURRENCY_CHANGE = 'https://api.coincap.io/v2/assets';
