@@ -14,7 +14,6 @@ const App = () => {
     const [totalCurrency, setTotalCurrency] = useState('')
 
     const addCurrency = async () => {
-        const key = input
         if(input){
             setCurrency(input)
             console.log(input)
@@ -30,13 +29,20 @@ const App = () => {
     useEffect(() => {
         const getCrypto = async () => {
             const crypto = await axios.get(CURRENCY_NAME)
-            console.log(crypto.data.data)
+            // console.log(crypto.data.data)
             setTotalCurrency(crypto.data.data)
 
         }
         getCrypto()
     }, [])
     
+    useEffect(() => {
+        const totalCurrency = async () => {
+            const array = await axios.get(CURRENCY_NAME)
+            // console.log(CURRENCY_NAME)
+            setTotalCurrency(array)
+        }
+    }, [])
     
     
     return(

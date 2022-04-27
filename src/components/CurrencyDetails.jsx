@@ -11,9 +11,9 @@ const CurrencyDetails = (props) => {
 
     useEffect(() => {
         const getDetails = async () => {
-            const res = await axios.get(`${CURRENCY_NAME}`)
-            const sym = await axios.get(`${CURRENCY_CHANGE}`)
-            setCurrencyDetails(res)
+            const res = await axios.get(`${CURRENCY_NAME}${props.currency}`)
+            const sym = await axios.get(`${CURRENCY_CHANGE}${props.currency}`)
+            console.log(res)
                              
         }
         getDetails()

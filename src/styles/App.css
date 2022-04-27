@@ -8,10 +8,17 @@ h1{
     padding: 75x;
     border-radius: 60px/15px;
 }
+h2{
+    color:aliceblue;
 
-/* body{
+}
+h3{
+    color:aliceblue;
+    
+}
+body{
     background-color: lightslategrey;
-} */
+}
 
 div{
     background-color: grey;
@@ -45,5 +52,5 @@ button:hover {
     flex-direction: column;
     text-align: center;
     justify-content: space-between;
-
+    
 }

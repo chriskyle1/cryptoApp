@@ -1,4 +1,5 @@
 import axios from "axios"
+import { useEffect } from "react"
 import { CURRENCY_NAME, CURRENCY_CHANGE } from "../globals"
 
 const DisplayCurrency = async (props) => {
