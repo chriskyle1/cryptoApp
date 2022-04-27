@@ -1,7 +1,3 @@
-import React from 'react'
-import { useState, useEffect} from 'react'
-
-
 const SelectCurrency = (props) => {
 
   return (
