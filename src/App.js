@@ -11,6 +11,7 @@ import DisplayCurrency from './components/DisplayCurrency'
 const App = () => {
     const [currency, setCurrency] = useState('')
     const [input , setInput] = useState('')
+    const [totalCurrency, setTotalCurrency] = useState('')
 
     const addCurrency = async () => {
         const key = input
@@ -27,11 +28,14 @@ const App = () => {
     }
 
     useEffect(() => {
-        const getCrypto = () => {
-            const crypto = await axios.get()
+        const getCrypto = async () => {
+            const crypto = await axios.get(CURRENCY_NAME)
+            console.log(crypto.data.data)
+            setTotalCurrency(crypto.data.data)
+
         }
         getCrypto()
-    })
+    }, [])
     
     
     return(
@@ -41,7 +45,7 @@ const App = () => {
 
             <CurrencyDetails currency={currency}/>
 
-            <DisplayCurrency />
+            <DisplayCurrency totalCurrency={totalCurrency}/>
             
             
 

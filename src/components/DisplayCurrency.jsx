@@ -4,18 +4,21 @@ import { CURRENCY_NAME } from "../globals"
 const DisplayCurrency = (props) => {
 
 
-    const getCurrency = async () => {
-        // const currency = await axios.get(CURRENCY_NAME)
-        // console.log(currency)
 
-    }
+
   
     return (
-    <div>
-        <ul>
-            
-        </ul>
-    </div>
+        <div>
+            {
+                props.currency.map((currency) => (
+                    <div>
+                        <h3>{currency.name}</h3>
+                        <h2>{priceUsd}</h2>
+                        <h2>{changePercent24Hr}</h2>
+                    </div>
+                ))
+            }
+        </div>
   )
 }
 

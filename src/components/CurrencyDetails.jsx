@@ -9,12 +9,14 @@ const CurrencyDetails = (props) => {
     
     const [currencyDetails, setCurrencyDetails] = useState('')
 
-    // const getDetails = async () => {
-    //     const res = await axios.get(`${CURRENCY_NAME}bitcoin`)
-    //     setCurrencyDetails(res)
-                         
-    // }
-    //     getDetails()
+    useEffect(() => {
+        const getDetails = async () => {
+            const res = await axios.get(`${CURRENCY_NAME}`)
+            setCurrencyDetails(res)
+                             
+        }
+        getDetails()
+    }, props.addCurrency)
         
     
     
