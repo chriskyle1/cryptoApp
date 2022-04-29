@@ -10,6 +10,7 @@ const CurrencyDetails = (props) => {
 
     useEffect(() => {
         const getDetails = async () => {
+            console.log(props.currency)
             const res = await axios.get(`${CURRENCY_NAME}${props.currency}`)
             const sym = await axios.get(`${CURRENCY_CHANGE}${props.currency}`)
             console.log(res.data)
@@ -17,8 +18,10 @@ const CurrencyDetails = (props) => {
             setCurrencySymbol(sym)
                              
         }
-        getDetails()
-    }, [props.addCurrency])
+        if(props.currency){
+            getDetails()
+        }
+    }, [props.currency])
         
     
     
