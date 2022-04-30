@@ -41,8 +41,9 @@ const App = () => {
     
     return(
         <div>
-            <h1>Welcome to the CryptoApp</h1>
-            <SelectCurrency handleChange={handleChange} input={input} addCurrency={addCurrency} />
+            <h1 className='title'>Welcome to the CryptoApp</h1>
+            <h4>Powered by Coincap API</h4>
+            <SelectCurrency handleChange={handleChange} input={input} addCurrency={addCurrency} /> 
             <CurrencyDetails currency={currency} />
             {totalCurrency ? <DisplayCurrency totalCurrency={totalCurrency} /> : null}
             

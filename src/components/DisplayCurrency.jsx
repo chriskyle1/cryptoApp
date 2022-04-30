@@ -4,7 +4,7 @@ const DisplayCurrency = (props) => {
         <div className="grid">
             {
                 props.totalCurrency.map((currency) => (
-                    <div key={currency.name} className="display">
+                    <div key={currency.name} className="card">
                         <button className="goto">
                             <h1 className="name">{currency.name}</h1>
                             <h2>Current Price in USD: {currency.priceUsd}</h2>

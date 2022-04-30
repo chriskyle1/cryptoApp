@@ -1,45 +1,30 @@
-h1{
-    text-align: center;
-    background-color:blue;
-    color: white;
-    padding: 75x;
-    border-radius: 60px/15px;
-}
-h2{
-    color:aliceblue;
-
-}
-h3{
-    color:aliceblue;
-    
+.title{
+    background-color: black;
 }
 body{
     background-color: lightslategrey;
 }
 
-div{
-    background-color: grey;
-    border-radius: 10px/15px;
-    border-color: black;
-}
-
 input{
-    height: 30px;
-    margin: 5px;
+    height: 42px;
+    width: 300px;
+    margin: 15px;
     text-align: center;
+    text-size-adjust: bold;
 
 }
 
 button{
-    background: white;
-    padding:0.5em 1em;
+    padding: 15px 32px;
     font-weight: bold;
+    color: white;
+    background-color: rgb(30, 30, 87);
 
 }
 
 button:hover {
-    height: 40px;
-    background: lightslategray;
+    background-color: rgb(83, 83, 219);
+    
 }
 
 .card{
@@ -47,7 +32,6 @@ button:hover {
     box-shadow: 5px 5px 5px;
     display: flex;
     flex-direction: column;
-    text-align: left;
     justify-content: space-between;
     
 }
