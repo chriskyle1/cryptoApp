@@ -5,9 +5,11 @@ const DisplayCurrency = (props) => {
             {
                 props.totalCurrency.map((currency) => (
                     <div key={currency.name} className="display">
-                        <h3>{currency.name}</h3>
-                        <h2>{currency.priceUsd}</h2>
-                        <h2>{currency.changePercent24Hr}</h2>
+                        <button className="goto">
+                            <h1 className="name">{currency.name}</h1>
+                            <h2>Current Price in USD: {currency.priceUsd}</h2>
+                            <h2>Percent change in 24 hours: {currency.changePercent24Hr}%</h2>
+                        </button>
                     </div>
                 ))
             }

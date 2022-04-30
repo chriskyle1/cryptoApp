@@ -29,9 +29,9 @@ const CurrencyDetails = (props) => {
     
     return(
         <div>
-            <h2>{currencyDetails.name} {currencySymbol.currencySymbol}</h2>
-            <h3>Current Price USD: {currencyDetails.priceUsd}</h3>
-            <h3>Percent Change in Price in 24 hours: {currencyDetails.changePercent24Hr}</h3>
+            <h1 className="name">{currencyDetails.name} {currencySymbol.currencySymbol}</h1>
+            <h2 className='price'>Current Price USD: {currencyDetails.priceUsd}</h2>
+            <h2>Percent Change in Price in 24 hours: {currencyDetails.changePercent24Hr}</h2>
         </div>
 
     )
