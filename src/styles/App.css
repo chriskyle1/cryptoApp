@@ -54,3 +54,15 @@ button:hover {
     justify-content: space-between;
     
 }
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(250px, 1fr));
+    grid-gap: 1em;
+    padding: 0.5em;
+  }
+
+  .display{
+      background-color: brown;
+      text-align: center;
+      padding: 30px;
+  }

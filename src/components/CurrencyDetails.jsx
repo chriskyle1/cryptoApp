@@ -12,10 +12,12 @@ const CurrencyDetails = (props) => {
         const getDetails = async () => {
             console.log(props.currency)
             const res = await axios.get(`${CURRENCY_NAME}${props.currency}`)
-            const sym = await axios.get(`${CURRENCY_CHANGE}${props.currency}`)
-            console.log(res.data)
-            setCurrencyDetails(res)
-            setCurrencySymbol(sym)
+            const response = await axios.get(`${CURRENCY_CHANGE}${props.currency}`)
+            setCurrencySymbol(response.data.data)
+                      
+            setCurrencyDetails(res.data.data)
+            
+            
                              
         }
         if(props.currency){
@@ -28,8 +30,8 @@ const CurrencyDetails = (props) => {
     return(
         <div>
             <h2>{currencyDetails.name} {currencySymbol.currencySymbol}</h2>
-            <h3>{currencyDetails.priceUsd}</h3>
-            <h3>{currencyDetails.changePercent24Hr}</h3>
+            <h3>Current Price USD: {currencyDetails.priceUsd}</h3>
+            <h3>Percent Change in Price in 24 hours: {currencyDetails.changePercent24Hr}</h3>
         </div>
 
     )

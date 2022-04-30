@@ -12,10 +12,11 @@ const App = () => {
     const [currency, setCurrency] = useState('')
     const [input , setInput] = useState('')
     const [totalCurrency, setTotalCurrency] = useState(null)
+    
 
     const addCurrency = async () => {
         if(input){
-            setCurrency(input)
+            setCurrency(input.toLocaleLowerCase())
         }
         setInput('')
         
@@ -42,8 +43,8 @@ const App = () => {
         <div>
             <h1>Welcome to the CryptoApp</h1>
             <SelectCurrency handleChange={handleChange} input={input} addCurrency={addCurrency} />
-            <CurrencyDetails currency={currency}/>
-            {totalCurrency ? <DisplayCurrency totalCurrency={totalCurrency}/> : null}
+            <CurrencyDetails currency={currency} />
+            {totalCurrency ? <DisplayCurrency totalCurrency={totalCurrency} /> : null}
             
             
 
