@@ -42,11 +42,11 @@ const App = () => {
     return(
         <div>
             <h1 className='title'>Welcome to the CryptoApp</h1>
-            <h4>Powered by Coincap API</h4>
+            <h4>Powered by Coincap API</h4> 
+            <img ahref='https://res.cloudinary.com/postman/image/upload/t_team_logo_pubdoc/v1/team/525e5bf5181d9cb4d8c085f31713342b1bbb53d9d0885532cf9300a424cbceb1'></img>
             <SelectCurrency handleChange={handleChange} input={input} addCurrency={addCurrency} /> 
             <CurrencyDetails currency={currency} />
-            {totalCurrency ? <DisplayCurrency totalCurrency={totalCurrency} /> : null}
-            
+            {totalCurrency ? <DisplayCurrency totalCurrency={totalCurrency} currency={currency}/> : null}        
             
 
         </div>

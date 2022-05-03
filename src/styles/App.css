@@ -1,5 +1,6 @@
 .title{
-    background-color: black;
+    color: white;
+    text-align: center;
 }
 body{
     background-color: lightslategrey;
@@ -33,7 +34,9 @@ button:hover {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    
+    background-color: rgb(30, 30, 87);
+    color: white;
+    text-align: center;
 }
 .grid {
     display: grid;
