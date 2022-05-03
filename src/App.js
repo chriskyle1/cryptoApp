@@ -6,7 +6,7 @@ import { useEffect, useState } from 'react'
 import CurrencyDetails from './components/CurrencyDetails'
 import SelectCurrency from './components/SelectCurrency'
 import DisplayCurrency from './components/DisplayCurrency'
-import { clear } from '@testing-library/user-event/dist/clear'
+
 
 
 const App = () => {
