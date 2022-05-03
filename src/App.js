@@ -6,6 +6,7 @@ import { useEffect, useState } from 'react'
 import CurrencyDetails from './components/CurrencyDetails'
 import SelectCurrency from './components/SelectCurrency'
 import DisplayCurrency from './components/DisplayCurrency'
+import { clear } from '@testing-library/user-event/dist/clear'
 
 
 const App = () => {
@@ -13,7 +14,6 @@ const App = () => {
     const [input , setInput] = useState('')
     const [totalCurrency, setTotalCurrency] = useState(null)
     
-
     const addCurrency = async () => {
         if(input){
             setCurrency(input.toLocaleLowerCase())
@@ -21,7 +21,7 @@ const App = () => {
         setInput('')
         
     }
-
+    
     const handleChange = (click) => {
         setInput(click.target.value)
     }
@@ -36,9 +36,7 @@ const App = () => {
         }
         getCrypto()
     }, [])
-    
-        
-    
+      
     return(
         <div>
             <h1 className='title'>Welcome to the CryptoApp</h1>
@@ -47,8 +45,6 @@ const App = () => {
             <SelectCurrency handleChange={handleChange} input={input} addCurrency={addCurrency} /> 
             <CurrencyDetails currency={currency} />
             {totalCurrency ? <DisplayCurrency totalCurrency={totalCurrency} currency={currency}/> : null}        
-            
-
         </div>
     )
 }

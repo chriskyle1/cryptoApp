@@ -13,20 +13,14 @@ const CurrencyDetails = (props) => {
             console.log(props.currency)
             const res = await axios.get(`${CURRENCY_NAME}${props.currency}`)
             const response = await axios.get(`${CURRENCY_CHANGE}${props.currency}`)
-            setCurrencySymbol(response.data.data)
-                      
-            setCurrencyDetails(res.data.data)
-            
-            
-                             
+            setCurrencySymbol(response.data.data)                      
+            setCurrencyDetails(res.data.data)                                    
         }
         if(props.currency){
             getDetails()
         }
     }, [props.currency])
-        
-    
-    
+           
     return(
         <div>
         {currencyDetails ? (
@@ -39,7 +33,6 @@ const CurrencyDetails = (props) => {
             <h3>Waiting for Input...</h3>
         )}
         </div>
-
     )
 }
 
