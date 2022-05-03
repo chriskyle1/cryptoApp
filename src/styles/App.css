@@ -45,8 +45,7 @@ button:hover {
     padding: 10px;
   }
 
-  .display{
-      background-color: brown;
-      text-align: center;
-      padding: 30px;
-  }
+.api{
+    text-align: center;
+    
+}
